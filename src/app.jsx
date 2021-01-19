@@ -1,6 +1,8 @@
 import React from 'react'
-import DropdownPage from './pages/DropdownPage'
+import DropdownPage from 'pages/dropdown'
+import NotFound from 'pages/notFound'
 import data from './data.json'
+import Button from 'components/button'
 import {
   BrowserRouter as Router, 
   Link, 
@@ -10,9 +12,27 @@ import {
 
 const App = () => {
   return(
-    <div className="container">
-      
-    </div>
+    <Router>
+      <div className="container mt-5">
+        <Switch>
+
+          <Route exact path='/'>
+            { data.pageBttns.map(btn =>
+              <Link to={`/${btn.page}`} key={btn.id} >
+                <Button>{btn.text}</Button>
+              </Link>
+            ) }
+          </Route>
+
+          <Route path='/dropdown'>
+            <DropdownPage data={data} />
+          </Route>
+
+          <Route component={ NotFound } />
+
+        </Switch>
+      </div>
+    </Router>
   )
 }
 
