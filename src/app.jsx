@@ -12,27 +12,7 @@ import {
 
 const App = () => {
   return(
-    <Router>
-      <div className="container mt-5">
-        <Switch>
-
-          <Route exact path='/'>
-            { data.pageBttns.map(btn =>
-              <Link to={`/${btn.page}`} key={btn.id} >
-                <Button>{btn.text}</Button>
-              </Link>
-            ) }
-          </Route>
-
-          <Route path='/dropdown'>
-            <DropdownPage data={data} />
-          </Route>
-
-          <Route component={ NotFound } />
-
-        </Switch>
-      </div>
-    </Router>
+    <div className="app"></div>
   )
 }
 
