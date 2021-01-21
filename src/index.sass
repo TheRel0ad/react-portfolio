@@ -1,19 +1,174 @@
-@import '~bootstrap'
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap')
+@import 'media'
+
+$main-color: #0ECA92
+$danger-color: #FF355A
+$content-width-xl: 1140px
+$content-width-lg: 960px
+$content-width-md: 720px
+$content-width-sm: 540px
 
 * 
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: sans-serif
+  font-family: "Quicksand", sans-serif
   text-decoration: none
   list-style: none
   border: none
   outline: none
+  color: #000
 
+body
+  padding-top: 70px
+  min-height: 200vh
 
-.container
-  max-width: 1140px
-  margin: 0 auto
+.navbar
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background: #ffffff
+  border-bottom: 1px solid darken(#f2f2f2, 3%)
+  h1
+    a
+      color: $main-color
+  .content
+    padding: 20px
+    display: flex
+    align-items: center
+  .links
+    margin-left: auto
+    a
+      margin-left: 16px
+      text-decoration: none
+      padding: 6px
+      transition: .2s ease-in
+      &:hover
+        color: $main-color
 
-a, button 
+.content
+  margin: 0px auto
+  padding: 20px
+  @include xl 
+    max-width: $content-width-xl
+  @include lg 
+    max-width: $content-width-lg
+  @include md 
+    max-width: $content-width-md
+  @include sm 
+    max-width: $content-width-sm
+
+.btn
+  background: $main-color
+  color: #fff
+  padding: 10px 16px
+  border-radius: 4px
   cursor: pointer
+  transition: .2s ease-in
+  &:hover
+    background: darken($main-color, 7%)
+  &:focus
+    box-shadow: 0 0 0 .2rem lighten($main-color, 25%)
+    background: darken($main-color, 7%)
+  &--theme
+    &-danger
+      background: $danger-color
+      &:hover
+        background: darken($danger-color, 7%)
+      &:focus
+        box-shadow: 0 0 0 .2rem lighten($danger-color, 30%)
+        background: darken($danger-color, 7%)
+  &--size
+    &-sm
+      padding: 6px 10px
+      border-radius: 3px
+
+.inner-content
+  padding: 0px 16px
+
+.title
+  font-size: 2.4rem
+
+.blog-preview 
+  padding: 1rem 16px
+  margin: 20px 0
+  border: 1px solid rgba(#f2f2f2, 0)
+  border-bottom: 1px solid darken(#f2f2f2, 3%)
+  &__title
+    margin-bottom: 1rem
+    a
+      font-size: 1.5rem
+      color: $main-color
+      &:hover
+        border-bottom: 3px solid $main-color
+  &__author
+    margin-bottom: 6px
+  &__btn
+    margin: 10px 0
+    padding: 6px 10px
+
+.mt-1 
+  margin-top: 10px
+.mt-2 
+  margin-top: 20px
+.mt-3 
+  margin-top: 30px
+.mt-4 
+  margin-top: 40px
+.mt-5 
+  margin-top: 50px
+  
+.mb-1 
+  margin-bottom: 10px
+.mb-2 
+  margin-bottom: 20px
+.mb-3 
+  margin-bottom: 30px
+.mb-4 
+  margin-bottom: 40px
+.mb-5 
+  margin-bottom: 50px
+  
+.ml-1 
+  margin-left: 10px
+.ml-2 
+  margin-left: 20px
+.ml-3 
+  margin-left: 30px
+.ml-4 
+  margin-left: 40px
+.ml-5 
+  margin-left: 50px
+  
+.mr-1 
+  margin-right: 10px
+.mr-2 
+  margin-right: 20px
+.mr-3 
+  margin-right: 30px
+.mr-4 
+  margin-right: 40px
+.mr-5 
+  
+.my-1 
+  margin: 10px 0
+.my-2 
+  margin: 20px 0
+.my-3 
+  margin: 30px 0
+.my-4 
+  margin: 40px 0
+.my-5 
+  margin: 50px 0
+  
+.mx-1 
+  margin: 0 10px
+.mx-2 
+  margin: 0 20px
+.mx-3 
+  margin: 0 30px
+.mx-4 
+  margin: 0 40px
+.mx-5 
+  margin: 0 50px
