@@ -2,7 +2,7 @@ import BlogItem from "./BlogItem"
 
 const BlogList = ({ blogs, title }) => {
   return ( 
-    <div className="blog-list my-3">
+    <div className="blog-list">
       <h2 className='title'>{ title }</h2>
       {blogs.length !== 0 ? 
         blogs.map(blog => (
