@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 const BlogItem = ({ blog }) => {
   return ( 
     <div className='blog-preview'>
       <h2 className='blog-preview__title'>
-        <a href="/">{ blog.title }</a>
+        <Link to={`/blogs/${blog.id}`}>{ blog.title }</Link>
       </h2>
       <p className='blog-preview__author'>
         Written by { blog.author }

@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.sass';
-import App from './components/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+Date.prototype.short = function(){
+  return (
+    this.getDate() + 
+    "." +  this.getMonth() + 1 +
+    "." +  this.getFullYear()
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
